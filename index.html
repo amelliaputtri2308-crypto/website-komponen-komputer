@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presentasi Komponen Komputer</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #081225;
+  color: white;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  padding: 35px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(135deg,#101e3d,#073b60);
+  animation: masuk .5s;
+}
+
+.slide.active {
+  display: flex;
+}
+
+@keyframes masuk {
+  from {opacity:0; transform:translateX(35px);}
+  to {opacity:1; transform:translateX(0);}
+}
+
+h1 {
+  font-size: clamp(35px,7vw,65px);
+  margin-bottom: 20px;
+  color: #65d9ff;
+}
+
+h2 {
+  font-size: clamp(28px,5vw,45px);
+  margin-bottom: 20px;
+  color: #65d9ff;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 750px;
+}
+
+.gambar {
+  font-size: 120px;
+  margin: 20px;
+  padding: 25px;
+  background: #ffffff18;
+  border: 2px solid #65d9ff;
+  border-radius: 25px;
+  box-shadow: 0 0 30px #00bfff44;
+}
+
+.kartu {
+  background: #ffffff15;
+  border: 1px solid #65d9ff;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 650px;
+  width: 100%;
+}
+
+.nomor {
+  color: #65d9ff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.tombol {
+  position: fixed;
+  bottom: 25px;
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #00bfff;
+  color: #06172d;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+#indikator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #65d9ff;
+  font-weight: bold;
+}
+
+.dots {
+  position: fixed;
+  top: 25px;
+  left: 20px;
+  font-size: 13px;
+  color: #9acbe8;
+}
+
+@media(max-width:600px) {
+  .slide {padding:20px;}
+  p {font-size:16px;}
+  .gambar {font-size:85px;}
+  .tombol {bottom:20px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="dots">💻 COMPUTER PRESENTATION</div>
+<div id="indikator">1 / 8</div>
+
+<!-- SLIDE 1 -->
+<section class="slide active">
+  <div class="gambar">💻</div>
+  <h1>KOMPONEN KOMPUTER</h1>
+  <p>Mengenal bagian-bagian komputer,
+  fungsi dan kegunaannya dalam kehidupan sehari-hari.</p>
+  <br>
+  <p>✨ Mari Belajar Bersama!</p>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+  <div class="nomor">SLIDE 02</div>
+  <h2>Apa Itu Komputer?</h2>
+  <div class="gambar">🖥️</div>
+  <div class="kartu">
+    <p>Komputer adalah perangkat elektronik
+    yang digunakan untuk menerima,
+    mengolah, menyimpan, dan menghasilkan
+    informasi.</p>
+  </div>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+  <div class="nomor">SLIDE 03</div>
+  <h2>Motherboard</h2>
+  <div class="gambar">🔌</div>
+  <div class="kartu">
+    <p>Motherboard adalah papan utama
+    komputer yang menghubungkan semua
+    komponen seperti processor, RAM,
+    dan perangkat lainnya.</p>
+  </div>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+  <div class="nomor">SLIDE 04</div>
+  <h2>Processor (CPU)</h2>
+  <div class="gambar">🧠</div>
+  <div class="kartu">
+    <p>Processor merupakan pusat pemrosesan
+    komputer yang menjalankan instruksi
+    dan mengolah data.</p>
+  </div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide">
+  <div class="nomor">SLIDE 05</div>
+  <h2>RAM</h2>
+  <div class="gambar">💾</div>
+  <div class="kartu">
+    <p>RAM adalah memori sementara
+    yang menyimpan data dan program
+    ketika komputer sedang digunakan.</p>
+  </div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide">
+  <div class="nomor">SLIDE 06</div>
+  <h2>VGA Card</h2>
+  <div class="gambar">🎮</div>
+  <div class="kartu">
+    <p>VGA Card atau GPU bertugas
+    memproses dan menghasilkan
+    tampilan grafis pada layar komputer.</p>
+  </div>
+</section>
+
+<!-- SLIDE 7 -->
+<section class="slide">
+  <div class="nomor">SLIDE 07</div>
+  <h2>Storage (SSD / HDD)</h2>
+  <div class="gambar">🗄️</div>
+  <div class="kartu">
+    <p>Storage digunakan untuk menyimpan
+    sistem operasi, aplikasi, dokumen,
+    foto, dan berbagai jenis data.</p>
+  </div>
+</section>
+
+<!-- SLIDE 8 -->
+<section class="slide">
+  <div class="nomor">SLIDE 08</div>
+  <h2>Kesimpulan</h2>
+  <div class="gambar">🏆</div>
+  <div class="kartu">
+    <p>Setiap komponen komputer memiliki
+    fungsi yang berbeda. Semua komponen
+    bekerja sama agar komputer dapat
+    beroperasi dengan baik.</p>
+    <br>
+    <h2>TERIMA KASIH!</h2>
+  </div>
+</section>
+
+<div class="tombol">
+  <button onclick="pindah(-1)">❮ Kembali</button>
+  <button onclick="pindah(1)">Lanjut ❯</button>
+</div>
+
+<script>
+let sekarang = 0;
+const slides = document.querySelectorAll(".slide");
+
+function tampilkan() {
+  slides.forEach((slide,index) => {
+    slide.classList.toggle("active",index === sekarang);
+  });
+
+  document.getElementById("indikator").innerText =
+    (sekarang + 1) + " / " + slides.length;
+}
+
+function pindah(arah) {
+  sekarang += arah;
+
+  if(sekarang < 0) sekarang = 0;
+  if(sekarang >= slides.length)
+    sekarang = slides.length - 1;
+
+  tampilkan();
+}
+
+// Navigasi keyboard
+document.addEventListener("keydown", e => {
+  if(e.key === "ArrowRight") pindah(1);
+  if(e.key === "ArrowLeft") pindah(-1);
+});
+
+// Navigasi sentuh / swipe
+let awal = 0;
+
+document.addEventListener("touchstart", e => {
+  awal = e.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend", e => {
+  let akhir = e.changedTouches[0].screenX;
+  let jarak = akhir - awal;
+
+  if(Math.abs(jarak) > 60) {
+    pindah(jarak < 0 ? 1 : -1);
+  }
+});
+</script>
+
+</body>
+</html>
