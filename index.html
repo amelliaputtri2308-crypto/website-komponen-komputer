@@ -21,7 +21,6 @@ body {
     color: white;
 }
 
-/* NAVBAR */
 header {
     background: #101827;
     padding: 20px 7%;
@@ -50,7 +49,6 @@ nav a {
 
 nav a:hover { color: #00d4ff; }
 
-/* HERO */
 .hero {
     min-height: 440px;
     padding: 75px 8%;
@@ -99,7 +97,6 @@ nav a:hover { color: #00d4ff; }
     transform: translateY(-4px);
 }
 
-/* SECTION */
 section { padding: 70px 8%; }
 
 .title {
@@ -110,7 +107,6 @@ section { padding: 70px 8%; }
 
 .title span { color: #00d4ff; }
 
-/* SLIDER */
 .slider-box {
     overflow: hidden;
     position: relative;
@@ -192,7 +188,6 @@ section { padding: 70px 8%; }
 
 .dot.active { background: #00d4ff; }
 
-/* SEARCH */
 .search-box {
     max-width: 550px;
     margin: 0 auto 25px;
@@ -211,7 +206,6 @@ section { padding: 70px 8%; }
 
 .search-box input::placeholder { color: #9eafc3; }
 
-/* FILTER */
 .filters {
     display: flex;
     justify-content: center;
@@ -236,7 +230,6 @@ section { padding: 70px 8%; }
     color: #08111d;
 }
 
-/* KATALOG */
 .products {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -295,7 +288,6 @@ section { padding: 70px 8%; }
     padding: 35px;
 }
 
-/* ABOUT */
 .about {
     background: #101827;
     text-align: center;
@@ -308,7 +300,6 @@ section { padding: 70px 8%; }
     line-height: 1.9;
 }
 
-/* KESIMPULAN */
 .conclusion {
     text-align: center;
 }
@@ -320,7 +311,6 @@ section { padding: 70px 8%; }
     color: #bdc9d8;
 }
 
-/* FOOTER */
 footer {
     background: #060a12;
     padding: 30px;
@@ -330,7 +320,6 @@ footer {
 
 footer span { color: #00d4ff; }
 
-/* RESPONSIVE */
 @media(max-width:768px) {
     header {
         flex-direction: column;
@@ -373,7 +362,6 @@ footer span { color: #00d4ff; }
 
 <body>
 
-<!-- NAVBAR -->
 <header>
     <div class="logo">TECHSTORE.</div>
     <nav>
@@ -384,7 +372,6 @@ footer span { color: #00d4ff; }
     </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero" id="home">
     <div class="hero-text">
         <h1>Mengenal <span>Komponen Komputer</span></h1>
@@ -398,11 +385,10 @@ footer span { color: #00d4ff; }
     </div>
 
     <img
-    src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=900"
-    alt="Komputer Gaming">
+        src="https://commons.wikimedia.org/wiki/Special:FilePath/ATX_computer_case.jpg?width=900"
+        alt="Casing komputer">
 </div>
 
-<!-- SLIDER -->
 <section id="slider">
     <h2 class="title">Pengenalan <span>Komponen</span></h2>
 
@@ -410,7 +396,7 @@ footer span { color: #00d4ff; }
         <div class="slider" id="sliderTrack">
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800" alt="Processor">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cpu-processor.jpg?width=800" alt="Processor">
                 <div>
                     <h2>Processor (CPU)</h2>
                     <p>
@@ -423,7 +409,7 @@ footer span { color: #00d4ff; }
             </div>
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800" alt="RAM">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/RAM_module_SDRAM_1GiB.jpg?width=800" alt="RAM">
                 <div>
                     <h2>RAM</h2>
                     <p>
@@ -436,7 +422,7 @@ footer span { color: #00d4ff; }
             </div>
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800" alt="Motherboard">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Computer_motherboard.jpg?width=800" alt="Motherboard">
                 <div>
                     <h2>Motherboard</h2>
                     <p>
@@ -449,7 +435,7 @@ footer span { color: #00d4ff; }
             </div>
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800" alt="Monitor">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Computer_monitor.jpg?width=800" alt="Monitor">
                 <div>
                     <h2>Monitor</h2>
                     <p>
@@ -470,7 +456,6 @@ footer span { color: #00d4ff; }
     <div class="dots" id="dots"></div>
 </section>
 
-<!-- 12 KOMPONEN -->
 <section id="produk">
     <h2 class="title">12 Komponen <span>Komputer</span></h2>
 
@@ -493,11 +478,10 @@ footer span { color: #00d4ff; }
     <div class="products" id="products"></div>
 </section>
 
-<!-- ABOUT -->
 <section class="about" id="about">
-    <h2 class="title">Tentang <span>MEYSTORE</span></h2>
+    <h2 class="title">Tentang <span>TECHSTORE</span></h2>
     <p>
-        MEYSTORE merupakan website edukasi yang dibuat
+        TECHSTORE merupakan website edukasi yang dibuat
         untuk memperkenalkan berbagai komponen komputer
         kepada masyarakat, khususnya pelajar dan pemula.
         Melalui website ini, pengunjung dapat mempelajari
@@ -506,7 +490,6 @@ footer span { color: #00d4ff; }
     </p>
 </section>
 
-<!-- KESIMPULAN -->
 <section class="conclusion">
     <h2 class="title">Kesimpulan <span>Pembelajaran</span></h2>
     <p>
@@ -521,7 +504,6 @@ footer span { color: #00d4ff; }
     </p>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2026 <span>TECHSTORE</span>. All Rights Reserved.</p>
     <p>Website Edukasi Komponen Komputer</p>
@@ -529,171 +511,153 @@ footer span { color: #00d4ff; }
 
 <script>
 
-/* DATA 12 KOMPONEN */
-
 const products = [
 
 {
 name:"Processor (CPU)",
 category:"Internal",
 description:"Processor adalah otak komputer yang berfungsi memproses instruksi, melakukan perhitungan, dan mengatur jalannya program.",
-image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Cpu-processor.jpg?width=600"
 },
 
 {
 name:"RAM",
 category:"Internal",
 description:"RAM (Random Access Memory) berfungsi menyimpan data sementara dari aplikasi yang sedang berjalan agar dapat diakses dengan cepat.",
-image:"https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/RAM_module_SDRAM_1GiB.jpg?width=600"
 },
 
 {
 name:"VGA Card",
 category:"Internal",
 description:"VGA Card atau GPU bertugas mengolah data grafis dan menghasilkan tampilan gambar pada monitor.",
-image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Holding_a_graphics_card_with_various_output_ports_while_showcasing_its_design_and_connectivity_options.jpg?width=600"
 },
 
 {
 name:"Motherboard",
 category:"Internal",
 description:"Motherboard adalah papan sirkuit utama yang menjadi tempat pemasangan dan penghubung berbagai komponen komputer.",
-image:"https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Computer_motherboard.jpg?width=600"
 },
 
 {
 name:"SSD",
 category:"Penyimpanan",
 description:"SSD (Solid State Drive) merupakan perangkat penyimpanan data yang menggunakan memori flash untuk membaca dan menulis data.",
-image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/SSD_%2852997087451%29.jpg?width=600"
 },
 
 {
 name:"Hard Disk (HDD)",
 category:"Penyimpanan",
 description:"HDD (Hard Disk Drive) merupakan perangkat penyimpanan yang menggunakan piringan magnetik untuk menyimpan sistem dan file.",
-image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Hard_disk_drive_system.jpg?width=600"
 },
 
 {
 name:"Power Supply (PSU)",
 category:"Internal",
 description:"Power Supply berfungsi mengubah arus listrik dari sumber listrik menjadi daya yang dibutuhkan oleh komponen komputer.",
-image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/ATX_Computer_power_supply_unit.jpg?width=600"
 },
 
 {
 name:"Casing Komputer",
 category:"Internal",
 description:"Casing merupakan tempat untuk memasang, melindungi, dan menyusun komponen komputer agar lebih rapi dan aman.",
-image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/ATX_computer_case.jpg?width=600"
 },
 
 {
 name:"CPU Cooler",
 category:"Pendingin",
 description:"CPU Cooler berfungsi membuang panas dari processor agar suhu tetap terjaga saat komputer digunakan.",
-image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/CPU_air_cooler.jpg?width=600"
 },
 
 {
 name:"Fan Casing",
 category:"Pendingin",
 description:"Fan casing berfungsi mengatur sirkulasi udara di dalam casing sehingga panas dari komponen dapat dikeluarkan.",
-image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Fans_from_computer_case_-_front_and_back_-_2018-05-22.jpg?width=600"
 },
 
 {
 name:"Monitor",
 category:"Eksternal",
 description:"Monitor merupakan perangkat output yang menampilkan hasil pengolahan komputer dalam bentuk teks, gambar, dan video.",
-image:"https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Computer_monitor.jpg?width=600"
 },
 
 {
 name:"Keyboard dan Mouse",
 category:"Eksternal",
 description:"Keyboard digunakan untuk memasukkan teks dan perintah, sedangkan mouse digunakan untuk menggerakkan kursor dan memilih objek.",
-image:"https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
+image:"https://commons.wikimedia.org/wiki/Special:FilePath/Computer_keyboard%2C_smart_card_reader%2C_and_mouse_on_a_wooden_desk.jpg?width=600"
 }
 
 ];
-
-/* MENAMPILKAN KOMPONEN */
 
 let activeFilter = "Semua";
 
 function renderProducts() {
 
-const container = document.getElementById("products");
+    const container = document.getElementById("products");
 
-const search = document
-.getElementById("search")
-.value.toLowerCase();
+    const search = document
+        .getElementById("search")
+        .value.toLowerCase();
 
-const filtered = products.filter(product => {
+    const filtered = products.filter(product => {
 
-const matchSearch =
-product.name.toLowerCase().includes(search) ||
-product.description.toLowerCase().includes(search);
+        const matchSearch =
+            product.name.toLowerCase().includes(search) ||
+            product.description.toLowerCase().includes(search);
 
-const matchCategory =
-activeFilter === "Semua" ||
-product.category === activeFilter;
+        const matchCategory =
+            activeFilter === "Semua" ||
+            product.category === activeFilter;
 
-return matchSearch && matchCategory;
+        return matchSearch && matchCategory;
+    });
 
-});
+    container.innerHTML = "";
 
-container.innerHTML = "";
+    if(filtered.length === 0) {
+        container.innerHTML =
+            '<div class="no-result">Komponen tidak ditemukan.</div>';
+        return;
+    }
 
-if(filtered.length === 0) {
-
-container.innerHTML =
-'<div class="no-result">Komponen tidak ditemukan.</div>';
-
-return;
-
+    filtered.forEach(product => {
+        container.innerHTML += `
+            <div class="card">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+                <div class="info">
+                    <span class="category">${product.category}</span>
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                </div>
+            </div>
+        `;
+    });
 }
-
-filtered.forEach((product,index) => {
-
-container.innerHTML += `
-<div class="card">
-<img src="${product.image}" alt="${product.name}" loading="lazy">
-<div class="info">
-<span class="category">${product.category}</span>
-<h3>${product.name}</h3>
-<p>${product.description}</p>
-</div>
-</div>
-`;
-
-});
-
-}
-
-/* FILTER KATEGORI */
 
 function setFilter(category,button) {
 
-activeFilter = category;
+    activeFilter = category;
 
-document.querySelectorAll(".filter-btn")
-.forEach(btn => btn.classList.remove("active"));
+    document.querySelectorAll(".filter-btn")
+        .forEach(btn => btn.classList.remove("active"));
 
-button.classList.add("active");
+    button.classList.add("active");
 
-renderProducts();
-
+    renderProducts();
 }
 
-/* SLIDER */
-
 const slider = document.getElementById("sliderTrack");
-
 const slides = document.querySelectorAll(".slide");
-
 const dotsContainer = document.getElementById("dots");
 
 let currentIndex = 0;
@@ -701,81 +665,60 @@ let autoSlide;
 
 slides.forEach((slide,index) => {
 
-const dot = document.createElement("div");
+    const dot = document.createElement("div");
+    dot.className = "dot";
 
-dot.className = "dot";
+    dot.onclick = () => {
+        currentIndex = index;
+        updateSlider();
+        restartAutoSlide();
+    };
 
-dot.onclick = () => {
-
-currentIndex = index;
-
-updateSlider();
-
-restartAutoSlide();
-
-};
-
-dotsContainer.appendChild(dot);
-
+    dotsContainer.appendChild(dot);
 });
 
 const dots = document.querySelectorAll(".dot");
 
 function updateSlider() {
 
-slider.style.transform =
-`translateX(-${currentIndex * 100}%)`;
+    slider.style.transform =
+        `translateX(-${currentIndex * 100}%)`;
 
-dots.forEach((dot,index) => {
-
-dot.classList.toggle(
-"active",
-index === currentIndex
-);
-
-});
-
+    dots.forEach((dot,index) => {
+        dot.classList.toggle(
+            "active",
+            index === currentIndex
+        );
+    });
 }
 
 function moveSlide(direction) {
 
-currentIndex =
-(currentIndex + direction + slides.length)
-% slides.length;
+    currentIndex =
+        (currentIndex + direction + slides.length)
+        % slides.length;
 
-updateSlider();
-
-restartAutoSlide();
-
+    updateSlider();
+    restartAutoSlide();
 }
 
 function startAutoSlide() {
 
-autoSlide = setInterval(() => {
+    autoSlide = setInterval(() => {
+        currentIndex =
+            (currentIndex + 1) % slides.length;
 
-currentIndex =
-(currentIndex + 1) % slides.length;
-
-updateSlider();
-
-},4000);
-
+        updateSlider();
+    },4000);
 }
 
 function restartAutoSlide() {
-
-clearInterval(autoSlide);
-
-startAutoSlide();
-
+    clearInterval(autoSlide);
+    startAutoSlide();
 }
 
-/* JALANKAN WEBSITE */
-
 renderProducts();
-
 updateSlider();
-
 startAutoSlide();
 
 </script>
