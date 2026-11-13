@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TECHSTORE - Komponen Komputer</title>
+<title>TECHSTORE - Mengenal Komponen Komputer</title>
 
 <style>
 * {
@@ -35,8 +35,8 @@ header {
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: bold;
     color: #00d4ff;
     letter-spacing: 2px;
 }
@@ -64,7 +64,7 @@ nav a:hover { color: #00d4ff; }
 .hero-text { max-width: 550px; }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 46px;
     margin-bottom: 20px;
 }
 
@@ -81,7 +81,6 @@ nav a:hover { color: #00d4ff; }
     max-height: 320px;
     object-fit: contain;
     border-radius: 15px;
-    filter: drop-shadow(0 0 25px #00bfff55);
 }
 
 .btn {
@@ -235,10 +234,9 @@ section { padding: 70px 8%; }
 .filter-btn:hover {
     background: #00bfff;
     color: #08111d;
-    border-color: #00bfff;
 }
 
-/* PRODUCT */
+/* KATALOG */
 .products {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -271,14 +269,13 @@ section { padding: 70px 8%; }
 
 .info h3 {
     font-size: 19px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .info p {
     color: #b8c5d6;
     font-size: 14px;
-    line-height: 1.7;
-    min-height: 48px;
+    line-height: 1.8;
 }
 
 .category {
@@ -289,13 +286,6 @@ section { padding: 70px 8%; }
     padding: 5px 10px;
     border-radius: 20px;
     margin-bottom: 12px;
-}
-
-.price {
-    color: #00d4ff;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 15px;
 }
 
 .no-result {
@@ -316,6 +306,18 @@ section { padding: 70px 8%; }
     margin: auto;
     color: #bdc9d8;
     line-height: 1.9;
+}
+
+/* KESIMPULAN */
+.conclusion {
+    text-align: center;
+}
+
+.conclusion p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+    color: #bdc9d8;
 }
 
 /* FOOTER */
@@ -376,42 +378,47 @@ footer span { color: #00d4ff; }
     <div class="logo">TECHSTORE.</div>
     <nav>
         <a href="#home">Home</a>
-        <a href="#komponen">Komponen</a>
-        <a href="#produk">Produk</a>
-        <a href="#about">About</a>
+        <a href="#slider">Pengenalan</a>
+        <a href="#produk">Komponen</a>
+        <a href="#about">Tentang</a>
     </nav>
 </header>
 
 <!-- HERO -->
 <div class="hero" id="home">
     <div class="hero-text">
-        <h1>Upgrade Your <span>Computer</span></h1>
+        <h1>Mengenal <span>Komponen Komputer</span></h1>
         <p>
-            Temukan 12 komponen komputer terbaik.
-            Pelajari fungsi, spesifikasi, dan kegunaan
-            setiap perangkat untuk membangun PC impianmu.
+            Selamat datang di TECHSTORE!
+            Website edukasi untuk mengenal berbagai
+            komponen komputer, fungsi, dan cara kerjanya.
+            Yuk, pelajari teknologi komputer bersama kami!
         </p>
-        <a href="#produk" class="btn">Jelajahi Produk</a>
+        <a href="#produk" class="btn">Mulai Belajar</a>
     </div>
 
     <img
     src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=900"
-    alt="Gaming PC">
+    alt="Komputer Gaming">
 </div>
 
 <!-- SLIDER -->
-<section id="komponen">
-    <h2 class="title">Komponen <span>Komputer</span></h2>
+<section id="slider">
+    <h2 class="title">Pengenalan <span>Komponen</span></h2>
 
     <div class="slider-box">
-        <div class="slider" id="slider">
+        <div class="slider" id="sliderTrack">
 
             <div class="slide">
                 <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800" alt="Processor">
                 <div>
                     <h2>Processor (CPU)</h2>
-                    <p>Otak komputer yang memproses instruksi, menjalankan program, dan mengatur operasi sistem.</p>
-                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                    <p>
+                        Processor merupakan otak komputer
+                        yang bertugas mengolah data dan
+                        menjalankan berbagai instruksi.
+                    </p>
+                    <button onclick="location.href='#produk'">Pelajari Komponen</button>
                 </div>
             </div>
 
@@ -419,8 +426,12 @@ footer span { color: #00d4ff; }
                 <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800" alt="RAM">
                 <div>
                     <h2>RAM</h2>
-                    <p>Memori sementara yang membantu komputer menjalankan berbagai aplikasi dengan cepat.</p>
-                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                    <p>
+                        RAM adalah tempat penyimpanan
+                        sementara untuk data dan program
+                        yang sedang digunakan komputer.
+                    </p>
+                    <button onclick="location.href='#produk'">Pelajari Komponen</button>
                 </div>
             </div>
 
@@ -428,208 +439,224 @@ footer span { color: #00d4ff; }
                 <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800" alt="Motherboard">
                 <div>
                     <h2>Motherboard</h2>
-                    <p>Papan utama yang menghubungkan processor, RAM, penyimpanan, dan perangkat lainnya.</p>
-                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                    <p>
+                        Motherboard merupakan papan utama
+                        yang menghubungkan seluruh perangkat
+                        keras dalam komputer.
+                    </p>
+                    <button onclick="location.href='#produk'">Pelajari Komponen</button>
                 </div>
             </div>
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800" alt="Gaming PC">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800" alt="Monitor">
                 <div>
-                    <h2>Gaming PC</h2>
-                    <p>Gabungan komponen komputer untuk kebutuhan gaming, desain, pekerjaan, dan hiburan.</p>
-                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                    <h2>Monitor</h2>
+                    <p>
+                        Monitor merupakan perangkat output
+                        yang menampilkan hasil pengolahan
+                        komputer dalam bentuk visual.
+                    </p>
+                    <button onclick="location.href='#produk'">Pelajari Komponen</button>
                 </div>
             </div>
 
         </div>
 
-        <button class="arrow prev" onclick="move(-1)">❮</button>
-        <button class="arrow next" onclick="move(1)">❯</button>
+        <button class="arrow prev" onclick="moveSlide(-1)">❮</button>
+        <button class="arrow next" onclick="moveSlide(1)">❯</button>
     </div>
 
     <div class="dots" id="dots"></div>
 </section>
 
-<!-- KATALOG 12 KOMPONEN -->
+<!-- 12 KOMPONEN -->
 <section id="produk">
-
     <h2 class="title">12 Komponen <span>Komputer</span></h2>
 
     <div class="search-box">
         <input
             type="text"
             id="search"
-            placeholder="Cari komponen komputer..."
+            placeholder="Cari nama komponen komputer..."
             oninput="renderProducts()">
     </div>
 
     <div class="filters">
         <button class="filter-btn active" onclick="setFilter('Semua',this)">Semua</button>
-        <button class="filter-btn" onclick="setFilter('Internal',this)">Internal</button>
+        <button class="filter-btn" onclick="setFilter('Internal',this)">Komponen Internal</button>
         <button class="filter-btn" onclick="setFilter('Penyimpanan',this)">Penyimpanan</button>
-        <button class="filter-btn" onclick="setFilter('Pendukung',this)">Pendukung</button>
-        <button class="filter-btn" onclick="setFilter('Periferal',this)">Periferal</button>
+        <button class="filter-btn" onclick="setFilter('Pendingin',this)">Pendingin</button>
+        <button class="filter-btn" onclick="setFilter('Eksternal',this)">Perangkat Eksternal</button>
     </div>
 
     <div class="products" id="products"></div>
-
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-    <h2 class="title">About <span>TechStore</span></h2>
+    <h2 class="title">Tentang <span>TECHSTORE</span></h2>
     <p>
-        TechStore adalah website katalog edukasi komponen
-        komputer yang memberikan informasi mengenai 12
-        perangkat keras komputer, fungsi, kegunaan, dan
-        contoh harga produk. Website ini dibuat untuk
-        membantu pengunjung mengenal teknologi komputer.
+        TECHSTORE merupakan website edukasi yang dibuat
+        untuk memperkenalkan berbagai komponen komputer
+        kepada masyarakat, khususnya pelajar dan pemula.
+        Melalui website ini, pengunjung dapat mempelajari
+        nama, gambar, fungsi, dan kegunaan dari 12
+        komponen komputer.
+    </p>
+</section>
+
+<!-- KESIMPULAN -->
+<section class="conclusion">
+    <h2 class="title">Kesimpulan <span>Pembelajaran</span></h2>
+    <p>
+        Komputer terdiri dari berbagai komponen yang
+        saling bekerja sama. Setiap komponen memiliki
+        fungsi berbeda, mulai dari memproses data,
+        menyimpan informasi, menampilkan gambar,
+        hingga membantu pengguna mengoperasikan komputer.
+        Dengan memahami fungsi setiap komponen,
+        kita dapat mengenal cara kerja komputer
+        dengan lebih baik.
     </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>© 2026 <span>TECHSTORE</span>. All Rights Reserved.</p>
-    <p>Website Komponen Komputer</p>
+    <p>Website Edukasi Komponen Komputer</p>
 </footer>
 
 <script>
 
-/* DATA 12 PRODUK */
+/* DATA 12 KOMPONEN */
 
 const products = [
 
 {
 name:"Processor (CPU)",
 category:"Internal",
-description:"Otak komputer yang bertugas mengolah instruksi dan menjalankan program.",
-price:"Rp2.500.000",
+description:"Processor adalah otak komputer yang berfungsi memproses instruksi, melakukan perhitungan, dan mengatur jalannya program.",
 image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
 },
 
 {
-name:"RAM DDR5",
+name:"RAM",
 category:"Internal",
-description:"Memori sementara untuk membantu proses multitasking komputer.",
-price:"Rp1.200.000",
+description:"RAM (Random Access Memory) berfungsi menyimpan data sementara dari aplikasi yang sedang berjalan agar dapat diakses dengan cepat.",
 image:"https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600"
 },
 
 {
 name:"VGA Card",
 category:"Internal",
-description:"Mengolah grafis untuk gaming, desain, animasi, dan rendering.",
-price:"Rp4.500.000",
+description:"VGA Card atau GPU bertugas mengolah data grafis dan menghasilkan tampilan gambar pada monitor.",
 image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
 },
 
 {
 name:"Motherboard",
 category:"Internal",
-description:"Papan utama yang menghubungkan seluruh komponen komputer.",
-price:"Rp1.800.000",
+description:"Motherboard adalah papan sirkuit utama yang menjadi tempat pemasangan dan penghubung berbagai komponen komputer.",
 image:"https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=600"
 },
 
 {
-name:"SSD Storage",
+name:"SSD",
 category:"Penyimpanan",
-description:"Media penyimpanan digital dengan kecepatan baca dan tulis tinggi.",
-price:"Rp950.000",
+description:"SSD (Solid State Drive) merupakan perangkat penyimpanan data yang menggunakan memori flash untuk membaca dan menulis data.",
 image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600"
 },
 
 {
 name:"Hard Disk (HDD)",
 category:"Penyimpanan",
-description:"Perangkat penyimpanan data berkapasitas besar untuk komputer.",
-price:"Rp750.000",
+description:"HDD (Hard Disk Drive) merupakan perangkat penyimpanan yang menggunakan piringan magnetik untuk menyimpan sistem dan file.",
 image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600"
 },
 
 {
 name:"Power Supply (PSU)",
 category:"Internal",
-description:"Mengubah listrik AC menjadi daya DC untuk seluruh komponen PC.",
-price:"Rp850.000",
+description:"Power Supply berfungsi mengubah arus listrik dari sumber listrik menjadi daya yang dibutuhkan oleh komponen komputer.",
 image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
 },
 
 {
 name:"Casing Komputer",
 category:"Internal",
-description:"Tempat untuk memasang dan melindungi komponen komputer.",
-price:"Rp850.000",
+description:"Casing merupakan tempat untuk memasang, melindungi, dan menyusun komponen komputer agar lebih rapi dan aman.",
 image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
 },
 
 {
 name:"CPU Cooler",
-category:"Pendukung",
-description:"Membantu menjaga suhu processor agar tidak terlalu panas.",
-price:"Rp450.000",
+category:"Pendingin",
+description:"CPU Cooler berfungsi membuang panas dari processor agar suhu tetap terjaga saat komputer digunakan.",
 image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
 },
 
 {
 name:"Fan Casing",
-category:"Pendukung",
-description:"Membantu sirkulasi udara dan mengeluarkan panas dari casing.",
-price:"Rp150.000",
+category:"Pendingin",
+description:"Fan casing berfungsi mengatur sirkulasi udara di dalam casing sehingga panas dari komponen dapat dikeluarkan.",
 image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
 },
 
 {
 name:"Monitor",
-category:"Periferal",
-description:"Menampilkan hasil pengolahan data komputer dalam bentuk visual.",
-price:"Rp1.800.000",
+category:"Eksternal",
+description:"Monitor merupakan perangkat output yang menampilkan hasil pengolahan komputer dalam bentuk teks, gambar, dan video.",
 image:"https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600"
 },
 
 {
 name:"Keyboard dan Mouse",
-category:"Periferal",
-description:"Perangkat input untuk mengetik dan mengendalikan komputer.",
-price:"Rp350.000",
+category:"Eksternal",
+description:"Keyboard digunakan untuk memasukkan teks dan perintah, sedangkan mouse digunakan untuk menggerakkan kursor dan memilih objek.",
 image:"https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
 }
 
 ];
 
-/* MENAMPILKAN PRODUK */
+/* MENAMPILKAN KOMPONEN */
 
 let activeFilter = "Semua";
 
 function renderProducts() {
 
 const container = document.getElementById("products");
-const search = document.getElementById("search").value.toLowerCase();
+
+const search = document
+.getElementById("search")
+.value.toLowerCase();
 
 const filtered = products.filter(product => {
 
-const matchesSearch =
+const matchSearch =
 product.name.toLowerCase().includes(search) ||
 product.description.toLowerCase().includes(search);
 
-const matchesCategory =
+const matchCategory =
 activeFilter === "Semua" ||
 product.category === activeFilter;
 
-return matchesSearch && matchesCategory;
+return matchSearch && matchCategory;
 
 });
 
 container.innerHTML = "";
 
 if(filtered.length === 0) {
+
 container.innerHTML =
 '<div class="no-result">Komponen tidak ditemukan.</div>';
+
 return;
+
 }
 
-filtered.forEach(product => {
+filtered.forEach((product,index) => {
 
 container.innerHTML += `
 <div class="card">
@@ -638,7 +665,6 @@ container.innerHTML += `
 <span class="category">${product.category}</span>
 <h3>${product.name}</h3>
 <p>${product.description}</p>
-<div class="price">${product.price}</div>
 </div>
 </div>
 `;
@@ -653,9 +679,8 @@ function setFilter(category,button) {
 
 activeFilter = category;
 
-document.querySelectorAll(".filter-btn").forEach(btn => {
-btn.classList.remove("active");
-});
+document.querySelectorAll(".filter-btn")
+.forEach(btn => btn.classList.remove("active"));
 
 button.classList.add("active");
 
@@ -665,22 +690,29 @@ renderProducts();
 
 /* SLIDER */
 
-const slider = document.getElementById("slider");
+const slider = document.getElementById("sliderTrack");
+
 const slides = document.querySelectorAll(".slide");
+
 const dotsContainer = document.getElementById("dots");
 
 let currentIndex = 0;
-let timer;
+let autoSlide;
 
 slides.forEach((slide,index) => {
 
 const dot = document.createElement("div");
+
 dot.className = "dot";
 
 dot.onclick = () => {
+
 currentIndex = index;
+
 updateSlider();
-restartSlider();
+
+restartAutoSlide();
+
 };
 
 dotsContainer.appendChild(dot);
@@ -695,44 +727,56 @@ slider.style.transform =
 `translateX(-${currentIndex * 100}%)`;
 
 dots.forEach((dot,index) => {
-dot.classList.toggle("active",index === currentIndex);
+
+dot.classList.toggle(
+"active",
+index === currentIndex
+);
+
 });
 
 }
 
-function move(direction) {
+function moveSlide(direction) {
 
 currentIndex =
-(currentIndex + direction + slides.length) % slides.length;
+(currentIndex + direction + slides.length)
+% slides.length;
 
 updateSlider();
-restartSlider();
+
+restartAutoSlide();
 
 }
 
-function startSlider() {
+function startAutoSlide() {
 
-timer = setInterval(() => {
+autoSlide = setInterval(() => {
 
-currentIndex = (currentIndex + 1) % slides.length;
+currentIndex =
+(currentIndex + 1) % slides.length;
+
 updateSlider();
 
 },4000);
 
 }
 
-function restartSlider() {
+function restartAutoSlide() {
 
-clearInterval(timer);
-startSlider();
+clearInterval(autoSlide);
+
+startAutoSlide();
 
 }
 
-/* MULAI WEBSITE */
+/* JALANKAN WEBSITE */
 
 renderProducts();
+
 updateSlider();
-startSlider();
+
+startAutoSlide();
 
 </script>
 
