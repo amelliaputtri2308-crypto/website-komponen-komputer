@@ -4,289 +4,736 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Presentasi Komponen Komputer</title>
+<title>TECHSTORE - Komponen Komputer</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
-  font-family: Arial, sans-serif;
-  background: #081225;
-  color: white;
-  overflow: hidden;
+    background: #080d18;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background: #101827;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 20px #0008;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #00d4ff;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: .3s;
+}
+
+nav a:hover { color: #00d4ff; }
+
+/* HERO */
+.hero {
+    min-height: 440px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: linear-gradient(120deg,#101827,#173858);
+}
+
+.hero-text { max-width: 550px; }
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span { color: #00d4ff; }
+
+.hero p {
+    color: #bdc9d8;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    width: 43%;
+    max-height: 320px;
+    object-fit: contain;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 25px #00bfff55);
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background: #00bfff;
+    color: #08111d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+/* SECTION */
+section { padding: 70px 8%; }
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.title span { color: #00d4ff; }
+
+/* SLIDER */
+.slider-box {
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px;
+}
+
+.slider {
+    display: flex;
+    transition: transform .6s ease;
 }
 
 .slide {
-  display: none;
-  min-height: 100vh;
-  width: 100%;
-  padding: 35px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  background: linear-gradient(135deg,#101e3d,#073b60);
-  animation: masuk .5s;
+    min-width: 100%;
+    min-height: 320px;
+    padding: 35px 65px;
+    background: #131f32;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.slide.active {
-  display: flex;
+.slide img {
+    width: 45%;
+    height: 240px;
+    object-fit: contain;
 }
 
-@keyframes masuk {
-  from {opacity:0; transform:translateX(35px);}
-  to {opacity:1; transform:translateX(0);}
+.slide h2 {
+    color: #00d4ff;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-h1 {
-  font-size: clamp(35px,7vw,65px);
-  margin-bottom: 20px;
-  color: #65d9ff;
+.slide p {
+    color: #bdc9d8;
+    line-height: 1.8;
 }
 
-h2 {
-  font-size: clamp(28px,5vw,45px);
-  margin-bottom: 20px;
-  color: #65d9ff;
+.slide button {
+    padding: 12px 25px;
+    margin-top: 20px;
+    background: #00bfff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-p {
-  font-size: 19px;
-  line-height: 1.7;
-  max-width: 750px;
+.arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #00bfff;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.gambar {
-  font-size: 120px;
-  margin: 20px;
-  padding: 25px;
-  background: #ffffff18;
-  border: 2px solid #65d9ff;
-  border-radius: 25px;
-  box-shadow: 0 0 30px #00bfff44;
-}
-
-.kartu {
-  background: #ffffff15;
-  border: 1px solid #65d9ff;
-  padding: 25px;
-  border-radius: 20px;
-  max-width: 650px;
-  width: 100%;
-}
-
-.nomor {
-  color: #65d9ff;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.tombol {
-  position: fixed;
-  bottom: 25px;
-  display: flex;
-  gap: 15px;
-  z-index: 10;
-}
-
-button {
-  padding: 13px 25px;
-  border: none;
-  border-radius: 30px;
-  background: #00bfff;
-  color: #06172d;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: white;
-  transform: scale(1.05);
-}
-
-#indikator {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  color: #65d9ff;
-  font-weight: bold;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .dots {
-  position: fixed;
-  top: 25px;
-  left: 20px;
-  font-size: 13px;
-  color: #9acbe8;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-@media(max-width:600px) {
-  .slide {padding:20px;}
-  p {font-size:16px;}
-  .gambar {font-size:85px;}
-  .tombol {bottom:20px;}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #526176;
+    cursor: pointer;
+}
+
+.dot.active { background: #00d4ff; }
+
+/* SEARCH */
+.search-box {
+    max-width: 550px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    background: #131f32;
+    border: 1px solid #00bfff;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box input::placeholder { color: #9eafc3; }
+
+/* FILTER */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: #17263a;
+    border: 1px solid #31435c;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #00bfff;
+    color: #08111d;
+    border-color: #00bfff;
+}
+
+/* PRODUCT */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #131f32;
+    border: 1px solid #273952;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 10px 30px #00bfff30;
+    border-color: #00bfff;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 15px;
+    background: #1b2b42;
+}
+
+.info { padding: 20px; }
+
+.info h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #b8c5d6;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.category {
+    display: inline-block;
+    background: #183a53;
+    color: #00d4ff;
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.price {
+    color: #00d4ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.no-result {
+    text-align: center;
+    color: #bdc9d8;
+    grid-column: 1/-1;
+    padding: 35px;
+}
+
+/* ABOUT */
+.about {
+    background: #101827;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #bdc9d8;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+footer {
+    background: #060a12;
+    padding: 30px;
+    text-align: center;
+    color: #8494aa;
+}
+
+footer span { color: #00d4ff; }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 { font-size: 35px; }
+
+    .hero img { width: 90%; }
+
+    .slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 45px;
+    }
+
+    .slide img {
+        width: 90%;
+        height: 170px;
+    }
+
+    .slide h2 { font-size: 24px; }
+
+    .products { grid-template-columns: 1fr; }
+
+    .title { font-size: 27px; }
 }
 </style>
 </head>
 
 <body>
 
-<div class="dots">💻 COMPUTER PRESENTATION</div>
-<div id="indikator">1 / 8</div>
+<!-- NAVBAR -->
+<header>
+    <div class="logo">TECHSTORE.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#komponen">Komponen</a>
+        <a href="#produk">Produk</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
 
-<!-- SLIDE 1 -->
-<section class="slide active">
-  <div class="gambar">💻</div>
-  <h1>KOMPONEN KOMPUTER</h1>
-  <p>Mengenal bagian-bagian komputer,
-  fungsi dan kegunaannya dalam kehidupan sehari-hari.</p>
-  <br>
-  <p>✨ Mari Belajar Bersama!</p>
-</section>
+<!-- HERO -->
+<div class="hero" id="home">
+    <div class="hero-text">
+        <h1>Upgrade Your <span>Computer</span></h1>
+        <p>
+            Temukan 12 komponen komputer terbaik.
+            Pelajari fungsi, spesifikasi, dan kegunaan
+            setiap perangkat untuk membangun PC impianmu.
+        </p>
+        <a href="#produk" class="btn">Jelajahi Produk</a>
+    </div>
 
-<!-- SLIDE 2 -->
-<section class="slide">
-  <div class="nomor">SLIDE 02</div>
-  <h2>Apa Itu Komputer?</h2>
-  <div class="gambar">🖥️</div>
-  <div class="kartu">
-    <p>Komputer adalah perangkat elektronik
-    yang digunakan untuk menerima,
-    mengolah, menyimpan, dan menghasilkan
-    informasi.</p>
-  </div>
-</section>
-
-<!-- SLIDE 3 -->
-<section class="slide">
-  <div class="nomor">SLIDE 03</div>
-  <h2>Motherboard</h2>
-  <div class="gambar">🔌</div>
-  <div class="kartu">
-    <p>Motherboard adalah papan utama
-    komputer yang menghubungkan semua
-    komponen seperti processor, RAM,
-    dan perangkat lainnya.</p>
-  </div>
-</section>
-
-<!-- SLIDE 4 -->
-<section class="slide">
-  <div class="nomor">SLIDE 04</div>
-  <h2>Processor (CPU)</h2>
-  <div class="gambar">🧠</div>
-  <div class="kartu">
-    <p>Processor merupakan pusat pemrosesan
-    komputer yang menjalankan instruksi
-    dan mengolah data.</p>
-  </div>
-</section>
-
-<!-- SLIDE 5 -->
-<section class="slide">
-  <div class="nomor">SLIDE 05</div>
-  <h2>RAM</h2>
-  <div class="gambar">💾</div>
-  <div class="kartu">
-    <p>RAM adalah memori sementara
-    yang menyimpan data dan program
-    ketika komputer sedang digunakan.</p>
-  </div>
-</section>
-
-<!-- SLIDE 6 -->
-<section class="slide">
-  <div class="nomor">SLIDE 06</div>
-  <h2>VGA Card</h2>
-  <div class="gambar">🎮</div>
-  <div class="kartu">
-    <p>VGA Card atau GPU bertugas
-    memproses dan menghasilkan
-    tampilan grafis pada layar komputer.</p>
-  </div>
-</section>
-
-<!-- SLIDE 7 -->
-<section class="slide">
-  <div class="nomor">SLIDE 07</div>
-  <h2>Storage (SSD / HDD)</h2>
-  <div class="gambar">🗄️</div>
-  <div class="kartu">
-    <p>Storage digunakan untuk menyimpan
-    sistem operasi, aplikasi, dokumen,
-    foto, dan berbagai jenis data.</p>
-  </div>
-</section>
-
-<!-- SLIDE 8 -->
-<section class="slide">
-  <div class="nomor">SLIDE 08</div>
-  <h2>Kesimpulan</h2>
-  <div class="gambar">🏆</div>
-  <div class="kartu">
-    <p>Setiap komponen komputer memiliki
-    fungsi yang berbeda. Semua komponen
-    bekerja sama agar komputer dapat
-    beroperasi dengan baik.</p>
-    <br>
-    <h2>TERIMA KASIH!</h2>
-  </div>
-</section>
-
-<div class="tombol">
-  <button onclick="pindah(-1)">❮ Kembali</button>
-  <button onclick="pindah(1)">Lanjut ❯</button>
+    <img
+    src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=900"
+    alt="Gaming PC">
 </div>
 
+<!-- SLIDER -->
+<section id="komponen">
+    <h2 class="title">Komponen <span>Komputer</span></h2>
+
+    <div class="slider-box">
+        <div class="slider" id="slider">
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800" alt="Processor">
+                <div>
+                    <h2>Processor (CPU)</h2>
+                    <p>Otak komputer yang memproses instruksi, menjalankan program, dan mengatur operasi sistem.</p>
+                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800" alt="RAM">
+                <div>
+                    <h2>RAM</h2>
+                    <p>Memori sementara yang membantu komputer menjalankan berbagai aplikasi dengan cepat.</p>
+                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=800" alt="Motherboard">
+                <div>
+                    <h2>Motherboard</h2>
+                    <p>Papan utama yang menghubungkan processor, RAM, penyimpanan, dan perangkat lainnya.</p>
+                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=800" alt="Gaming PC">
+                <div>
+                    <h2>Gaming PC</h2>
+                    <p>Gabungan komponen komputer untuk kebutuhan gaming, desain, pekerjaan, dan hiburan.</p>
+                    <button onclick="location.href='#produk'">Lihat Produk</button>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="arrow prev" onclick="move(-1)">❮</button>
+        <button class="arrow next" onclick="move(1)">❯</button>
+    </div>
+
+    <div class="dots" id="dots"></div>
+</section>
+
+<!-- KATALOG 12 KOMPONEN -->
+<section id="produk">
+
+    <h2 class="title">12 Komponen <span>Komputer</span></h2>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="Cari komponen komputer..."
+            oninput="renderProducts()">
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="setFilter('Semua',this)">Semua</button>
+        <button class="filter-btn" onclick="setFilter('Internal',this)">Internal</button>
+        <button class="filter-btn" onclick="setFilter('Penyimpanan',this)">Penyimpanan</button>
+        <button class="filter-btn" onclick="setFilter('Pendukung',this)">Pendukung</button>
+        <button class="filter-btn" onclick="setFilter('Periferal',this)">Periferal</button>
+    </div>
+
+    <div class="products" id="products"></div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <h2 class="title">About <span>TechStore</span></h2>
+    <p>
+        TechStore adalah website katalog edukasi komponen
+        komputer yang memberikan informasi mengenai 12
+        perangkat keras komputer, fungsi, kegunaan, dan
+        contoh harga produk. Website ini dibuat untuk
+        membantu pengunjung mengenal teknologi komputer.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 <span>TECHSTORE</span>. All Rights Reserved.</p>
+    <p>Website Komponen Komputer</p>
+</footer>
+
 <script>
-let sekarang = 0;
+
+/* DATA 12 PRODUK */
+
+const products = [
+
+{
+name:"Processor (CPU)",
+category:"Internal",
+description:"Otak komputer yang bertugas mengolah instruksi dan menjalankan program.",
+price:"Rp2.500.000",
+image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
+},
+
+{
+name:"RAM DDR5",
+category:"Internal",
+description:"Memori sementara untuk membantu proses multitasking komputer.",
+price:"Rp1.200.000",
+image:"https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600"
+},
+
+{
+name:"VGA Card",
+category:"Internal",
+description:"Mengolah grafis untuk gaming, desain, animasi, dan rendering.",
+price:"Rp4.500.000",
+image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
+},
+
+{
+name:"Motherboard",
+category:"Internal",
+description:"Papan utama yang menghubungkan seluruh komponen komputer.",
+price:"Rp1.800.000",
+image:"https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=600"
+},
+
+{
+name:"SSD Storage",
+category:"Penyimpanan",
+description:"Media penyimpanan digital dengan kecepatan baca dan tulis tinggi.",
+price:"Rp950.000",
+image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600"
+},
+
+{
+name:"Hard Disk (HDD)",
+category:"Penyimpanan",
+description:"Perangkat penyimpanan data berkapasitas besar untuk komputer.",
+price:"Rp750.000",
+image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600"
+},
+
+{
+name:"Power Supply (PSU)",
+category:"Internal",
+description:"Mengubah listrik AC menjadi daya DC untuk seluruh komponen PC.",
+price:"Rp850.000",
+image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
+},
+
+{
+name:"Casing Komputer",
+category:"Internal",
+description:"Tempat untuk memasang dan melindungi komponen komputer.",
+price:"Rp850.000",
+image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
+},
+
+{
+name:"CPU Cooler",
+category:"Pendukung",
+description:"Membantu menjaga suhu processor agar tidak terlalu panas.",
+price:"Rp450.000",
+image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600"
+},
+
+{
+name:"Fan Casing",
+category:"Pendukung",
+description:"Membantu sirkulasi udara dan mengeluarkan panas dari casing.",
+price:"Rp150.000",
+image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600"
+},
+
+{
+name:"Monitor",
+category:"Periferal",
+description:"Menampilkan hasil pengolahan data komputer dalam bentuk visual.",
+price:"Rp1.800.000",
+image:"https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600"
+},
+
+{
+name:"Keyboard dan Mouse",
+category:"Periferal",
+description:"Perangkat input untuk mengetik dan mengendalikan komputer.",
+price:"Rp350.000",
+image:"https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
+}
+
+];
+
+/* MENAMPILKAN PRODUK */
+
+let activeFilter = "Semua";
+
+function renderProducts() {
+
+const container = document.getElementById("products");
+const search = document.getElementById("search").value.toLowerCase();
+
+const filtered = products.filter(product => {
+
+const matchesSearch =
+product.name.toLowerCase().includes(search) ||
+product.description.toLowerCase().includes(search);
+
+const matchesCategory =
+activeFilter === "Semua" ||
+product.category === activeFilter;
+
+return matchesSearch && matchesCategory;
+
+});
+
+container.innerHTML = "";
+
+if(filtered.length === 0) {
+container.innerHTML =
+'<div class="no-result">Komponen tidak ditemukan.</div>';
+return;
+}
+
+filtered.forEach(product => {
+
+container.innerHTML += `
+<div class="card">
+<img src="${product.image}" alt="${product.name}" loading="lazy">
+<div class="info">
+<span class="category">${product.category}</span>
+<h3>${product.name}</h3>
+<p>${product.description}</p>
+<div class="price">${product.price}</div>
+</div>
+</div>
+`;
+
+});
+
+}
+
+/* FILTER KATEGORI */
+
+function setFilter(category,button) {
+
+activeFilter = category;
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+renderProducts();
+
+}
+
+/* SLIDER */
+
+const slider = document.getElementById("slider");
 const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.getElementById("dots");
 
-function tampilkan() {
-  slides.forEach((slide,index) => {
-    slide.classList.toggle("active",index === sekarang);
-  });
+let currentIndex = 0;
+let timer;
 
-  document.getElementById("indikator").innerText =
-    (sekarang + 1) + " / " + slides.length;
+slides.forEach((slide,index) => {
+
+const dot = document.createElement("div");
+dot.className = "dot";
+
+dot.onclick = () => {
+currentIndex = index;
+updateSlider();
+restartSlider();
+};
+
+dotsContainer.appendChild(dot);
+
+});
+
+const dots = document.querySelectorAll(".dot");
+
+function updateSlider() {
+
+slider.style.transform =
+`translateX(-${currentIndex * 100}%)`;
+
+dots.forEach((dot,index) => {
+dot.classList.toggle("active",index === currentIndex);
+});
+
 }
 
-function pindah(arah) {
-  sekarang += arah;
+function move(direction) {
 
-  if(sekarang < 0) sekarang = 0;
-  if(sekarang >= slides.length)
-    sekarang = slides.length - 1;
+currentIndex =
+(currentIndex + direction + slides.length) % slides.length;
 
-  tampilkan();
+updateSlider();
+restartSlider();
+
 }
 
-// Navigasi keyboard
-document.addEventListener("keydown", e => {
-  if(e.key === "ArrowRight") pindah(1);
-  if(e.key === "ArrowLeft") pindah(-1);
-});
+function startSlider() {
 
-// Navigasi sentuh / swipe
-let awal = 0;
+timer = setInterval(() => {
 
-document.addEventListener("touchstart", e => {
-  awal = e.changedTouches[0].screenX;
-});
+currentIndex = (currentIndex + 1) % slides.length;
+updateSlider();
 
-document.addEventListener("touchend", e => {
-  let akhir = e.changedTouches[0].screenX;
-  let jarak = akhir - awal;
+},4000);
 
-  if(Math.abs(jarak) > 60) {
-    pindah(jarak < 0 ? 1 : -1);
-  }
-});
+}
+
+function restartSlider() {
+
+clearInterval(timer);
+startSlider();
+
+}
+
+/* MULAI WEBSITE */
+
+renderProducts();
+updateSlider();
+startSlider();
+
 </script>
 
 </body>
